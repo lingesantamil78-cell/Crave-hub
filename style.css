@@ -47,11 +47,9 @@ body{background:#fffdf9;color:var(--ink)}
 @media(max-width:650px){.brand{font-size:19px}.brand-mark{width:34px;height:34px}.auth-bottom{gap:8px;font-size:8px}.creator-credit{letter-spacing:1px}}
 
 
-/* Creator portrait blended into the first hero slide background */
-.auth-visual{isolation:isolate}
-.auth-visual:after{content:"";position:absolute;z-index:0;top:50%;right:2%;transform:translateY(-50%);width:min(46%,360px);height:62%;background-image:linear-gradient(90deg,#18191600 0%,#18191608 55%,#18191612 100%),url("https://i.ibb.co/RGbL6dgX/file-00000000b63c8211ad8f962c8c8a9efd.png");background-size:cover;background-position:center 24%;background-repeat:no-repeat;opacity:.42;mix-blend-mode:screen;filter:saturate(.72);-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 28%,#000 78%,transparent 100%),linear-gradient(0deg,transparent 0%,#000 14%,#000 84%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 28%,#000 78%,transparent 100%),linear-gradient(0deg,transparent 0%,#000 14%,#000 84%,transparent 100%);pointer-events:none}
+/* Portrait appears only once, inside the blended hero stage. */
 .auth-visual .brand,.auth-hero,.auth-bottom{z-index:1}
-.auth-hero{margin:25px 0}
+
 .spin-launch{display:flex;align-items:center;gap:12px;width:100%;margin:0 0 22px;padding:13px 14px;border:1px solid #d8b97480;border-radius:14px;background:linear-gradient(110deg,#fbf6ed,#f4e8d4);color:#541e2b;text-align:left;cursor:pointer;transition:transform .2s,box-shadow .2s}
 .spin-launch:hover{transform:translateY(-2px);box-shadow:0 10px 24px #541e2b16}
 .spin-launch-icon{display:grid;place-items:center;width:39px;height:39px;flex-shrink:0;border-radius:12px;background:#541e2b;color:#e8d4a6;font-size:22px}
@@ -68,3 +66,36 @@ body{background:#fffdf9;color:var(--ink)}
 .spin-now{max-width:270px;margin:0 auto}
 .spin-result{min-height:20px;margin:14px 0 0!important;color:#6b2336;font-size:13px!important;font-weight:800}
 @media(max-width:650px){.creator-photo-card{margin:16px 0 0}.creator-photo-card img{width:88px;height:110px}.auth-hero{margin:22px 0}.spin-launch{margin-bottom:20px}.wheel-wrap{width:244px;height:244px}.wheel-label{font-size:8px}.wl1{transform:rotate(22.5deg) translateY(-81px)}.wl2{transform:rotate(67.5deg) translateY(-81px);color:#541e2b}.wl3{transform:rotate(112.5deg) translateY(-81px)}.wl4{transform:rotate(157.5deg) translateY(-81px);color:#541e2b}.wl5{transform:rotate(202.5deg) translateY(-81px)}.wl6{transform:rotate(247.5deg) translateY(-81px);color:#541e2b}.wl7{transform:rotate(292.5deg) translateY(-81px)}.wl8{transform:rotate(337.5deg) translateY(-81px);color:#541e2b}}
+
+
+/* GOLD PREMIUM SIGN-IN VISUAL — portrait blends into the background */
+:root{--ink:#25151b;--muted:#82736e;--cream:#fbf6ed;--line:#eadbc5;--gold:#e8d4a6;--gold-deep:#b68b4b;--burgundy:#541e2b;--shadow:0 22px 60px #2b102019}
+.auth-screen{background:#fffaf2;grid-template-columns:1.02fr .98fr}
+.gold-visual{isolation:isolate;min-height:100vh;padding:34px clamp(22px,5vw,76px);background:radial-gradient(ellipse at 56% 58%,#78384a 0%,#541e2b 44%,#2b111a 100%);color:#fff8eb}
+.gold-visual:before{width:480px;height:480px;right:-180px;bottom:-190px;border-color:#e8d4a62a;box-shadow:0 0 0 48px #e8d4a60a,0 0 0 100px #e8d4a607}
+.gold-visual:after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(130deg,#fff1cf0c,transparent 42%,#16070b60),radial-gradient(ellipse at 45% 95%,#d4a85a22,transparent 45%)}
+.gold-visual .brand{z-index:3;color:#fff4dc;letter-spacing:2.4px;font-size:17px}.gold-visual .brand-mark{color:#e8d4a6}
+.portrait-stage{position:relative;isolation:isolate;display:grid;place-items:center;flex:1;min-height:400px;margin:18px -10px 12px;overflow:hidden}
+.portrait-aura{position:absolute;width:min(76%,390px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#e8d4a625 0%,#b68b4b13 48%,transparent 72%);filter:blur(7px);z-index:-2}
+.brand-portrait{position:absolute;z-index:1;bottom:-2%;left:50%;transform:translateX(-50%);height:94%;width:min(76%,390px);object-fit:contain;object-position:center bottom;filter:drop-shadow(0 24px 28px #16070b55);-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 78%,#000000c9 88%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0%,#000 78%,#000000c9 88%,transparent 100%)}
+.portrait-orbit{position:absolute;border:1px solid #e8d4a64c;border-radius:50%;width:min(78%,420px);aspect-ratio:1;z-index:-1}.orbit-one{transform:scaleX(.76) rotate(-20deg)}.orbit-two{width:min(90%,475px);transform:scaleX(.76) rotate(28deg);border-color:#e8d4a61d}
+.gold-spark{position:absolute;color:#e8d4a6;text-shadow:0 0 16px #e8d4a67a;z-index:2}.spark-one{top:18%;left:19%;font-size:24px}.spark-two{top:32%;right:14%;font-size:30px}.spark-three{bottom:18%;left:24%;font-size:17px}
+.auth-bottom{position:relative;z-index:3;align-items:center;padding-top:18px;border-top:1px solid #e8d4a62c;color:#c9b99b;font-size:9px;letter-spacing:1.5px}.signature-line{font-size:9px;letter-spacing:1.4px;color:#c9b99b}.creator-credit{color:#f0dca8;font-size:10px;font-weight:800;letter-spacing:1.7px;white-space:nowrap;text-align:right}
+.auth-panel{position:relative;background:radial-gradient(ellipse at top right,#f5e8cf5c,transparent 44%),#fffdf9;padding:35px 24px}.auth-form{background:#fffdf9;border:1px solid #eadbc5;border-radius:24px;padding:clamp(22px,3vw,34px);box-shadow:0 24px 70px #541e2b0c;position:relative}
+.auth-form:before{content:"✦  GOLD MEMBER EXPERIENCE";display:block;font-size:9px;letter-spacing:2px;color:#a77a3e;margin-bottom:16px}.auth-form h2 em{color:#b68b4b}.auth-form input{border-radius:12px;border-color:#e7d9c6;background:#fffaf2}.auth-form .btn{border-radius:12px;background:linear-gradient(110deg,#6b263a,#451521);box-shadow:0 10px 24px #541e2b2e}.spin-launch{border:1px solid #d6b878!important;background:linear-gradient(110deg,#fff8e8,#f5e7c8)!important;box-shadow:0 8px 24px #a77a3e14!important}
+@media(max-width:760px){.auth-screen{grid-template-columns:1fr}.gold-visual{min-height:470px;padding:22px 24px 18px}.portrait-stage{min-height:300px;margin:0 -6px}.brand-portrait{height:100%;width:min(72%,310px)}.portrait-aura{width:min(70%,290px)}.portrait-orbit{width:min(74%,310px)}.orbit-two{width:min(88%,365px)}.auth-bottom{font-size:8px;padding-top:12px}.creator-credit{font-size:9px}.auth-panel{padding:28px 18px 36px}.auth-form{padding:24px 20px}}
+@media(prefers-reduced-motion:no-preference){.brand-portrait{animation:portrait-arrive .8s ease-out both}.gold-spark{animation:spark-float 4s ease-in-out infinite}.spark-two{animation-delay:.7s}.spark-three{animation-delay:1.3s}@keyframes portrait-arrive{from{opacity:0;transform:translate(-50%,12px) scale(.97)}to{opacity:1;transform:translate(-50%,0) scale(1)}}@keyframes spark-float{0%,100%{translate:0 0;opacity:.65}50%{translate:0 -7px;opacity:1}}}
+
+
+/* Clean, single-tagline gold-premium hero */
+.gold-visual{position:relative;background:radial-gradient(ellipse at 48% 58%,#713044 0%,#541e2b 48%,#261018 100%);}
+.gold-visual:after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(115deg,#fff1cf0b 0%,transparent 42%,#16070b35 100%),radial-gradient(ellipse at 50% 92%,#d4a85a20,transparent 50%);}
+.hero-tagline{position:relative;z-index:2;margin:20px 0 0;color:#f0dca8;font-family:'Playfair Display',Georgia,serif;font-size:clamp(16px,2vw,22px);font-style:italic;letter-spacing:.35px;text-align:center;text-shadow:0 2px 18px #10060a70;}
+.portrait-stage{flex:1;min-height:390px;margin:0 -10px 8px;}
+.brand-portrait{width:min(68%,360px);height:96%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 18px 26px #16070b40);-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 70%,#000c 82%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0%,#000 70%,#000c 82%,transparent 100%);}
+.portrait-aura{width:min(78%,390px);background:radial-gradient(ellipse,#e8d4a622 0%,#b68b4b12 50%,transparent 73%);}
+.portrait-orbit{border-color:#e8d4a630;}
+.auth-bottom{justify-content:flex-end;border-top:1px solid #e8d4a62c;padding-top:14px;margin-top:0;}
+.creator-credit{font-size:10px;letter-spacing:1.8px;color:#f0dca8;text-shadow:0 1px 10px #0006;}
+.signature-line{display:none!important;}
+@media(max-width:760px){.gold-visual{min-height:490px}.hero-tagline{margin:12px 0 0;font-size:18px}.portrait-stage{min-height:300px;margin:0 -6px 5px}.brand-portrait{width:min(70%,300px);height:100%}.auth-bottom{padding-top:10px}.creator-credit{font-size:9px}}

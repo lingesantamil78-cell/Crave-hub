@@ -1,19 +1,7 @@
-CRAVE HUB — PREMIUM FOOD ORDERING DEMO
+CRAVE HUB — GOLD PREMIUM UPDATED
 
-FILES
-- index.html : app pages and structure
-- style.css  : burgundy, champagne gold and ivory design
-- script.js  : interactive menu, search, favourites, cart, coupon, checkout, demo tracking and Spin & Win wheel
-- Thamizh portrait is loaded from the supplied ImgBB image link (internet required).
+Files: index.html, style.css, script.js, assets/
 
-RUN
-1. Extract this ZIP to a folder.
-2. Keep index.html, style.css, script.js and the assets folder together.
-3. Open index.html in Chrome or Edge.
-4. Fill in the sign-in details to enter the menu.
-5. Use Spin & Win on the sign-in page to spin the prize wheel.
+The sign-in cover uses the portrait as a medium-sized background-blended visual with no text baked into the photo. “CREATED BY THAMIZH” appears once on the side/footer line. Gold/burgundy premium styling is added without replacing existing JavaScript interactions.
 
-NOTES
-- Frontend demo only: no real accounts, payment, restaurant orders, or rider GPS are connected.
-- Food photographs load from Unsplash and require internet access.
-- Created by THAMIZH.
+Run: open index.html in a browser. For GitHub Pages, upload the contents of this folder (not the ZIP) to the repository root, keeping assets/ beside index.html.
